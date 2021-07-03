@@ -1,0 +1,37 @@
+let movies = `[
+    {
+        "movieName": "A Star is Born",
+        "image": "https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        "description": "Short description",
+        "likes": 1
+      }, 
+      {
+        "movieName": "A Star is Dead",
+        "image": "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1834&q=80",
+        "description": "Short description",
+        "likes": 4
+      },
+      {
+        "movieName": "A Star is Dead",
+        "image": "https://images.unsplash.com/photo-1534809027769-b00d750a6bac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
+        "description": "Short description",
+        "likes": 66
+      },      {
+        "movieName": "A Star is Dead",
+        "image": "https://images.unsplash.com/flagged/photo-1589829482673-03413c918c48?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHN0YXIlMjB3YXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "description": "Short description",
+        "likes": 20
+      },
+      {
+        "movieName": "A Star is Dead",
+        "image": "https://images.unsplash.com/photo-1617799890023-c7b03d079b1f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        "description": "Short description",
+        "likes": 17
+      },
+      {
+        "movieName": "A Star is Dead",
+        "image": "https://images.unsplash.com/photo-1599477163717-7014bdd8ebd6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        "description": "Short description",
+        "likes": 8
+      }
+]`
