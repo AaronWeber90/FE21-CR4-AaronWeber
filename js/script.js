@@ -1,59 +1,48 @@
 // CREATE CONTENT FOR MOVIE CONTAINER
 let movieArr = JSON.parse(movies);
 
-let result = "";
+function showMovies(arr){
+  let result = "";
 
-for (let i = 0; i < movieArr.length; i++) {
-  result += `
-  <div class="media p-1 flex-grow-1">
-  <img src="${movieArr[i].image}" alt="" class="border">
-  <div class="media-body p-3 d-flex flex-column justify-content-between">
-    <div class="text-left">
-        <h4>${movieArr[i].movieName}</h4>
-        <p>${movieArr[i].description}</p>
-    </div>  
-    <div class="text-right"><span id="like-btn" class="like-link">Like <i class="fas fa-thumbs-up"></i></span><span class="like-number rounded-circle">${movieArr[i].likes}</span></div>
-  </div>
-  </div>`
+  for (let i = 0; i < arr.length; i++) {
+    result += `
+    <div class="media p-1 flex-grow-1">
+    <img src="${arr[i].image}" alt="" class="border">
+    <div class="media-body p-3 d-flex flex-column justify-content-between">
+      <div class="text-left">
+          <h4>${arr[i].movieName}</h4>
+          <p>${arr[i].description}</p>
+      </div>  
+      <div class="text-right"><span id="like-btn" class="like-link">Like <i class="fas fa-thumbs-up"></i></span><span class="like-number rounded-circle">${movieArr[i].likes}</span></div>
+    </div>
+    </div>`
+}
+document.getElementById("movie-container").innerHTML = result;
 }
 
-document.getElementById("movie-container").innerHTML = result;
-
+showMovies(movieArr);
+addLikes();
 
 
 // CREATE SORTED ARRAY
 document.getElementById("sort-btn").addEventListener ("click", movieSort);
 
 function movieSort() {
-  movieArr = movieArr.sort((a, b) => a.likes - b.likes);
-  let descArr = "";
-  console.log(movieArr)
-  for (let i = 0; i < movieArr.length; i++) {
-    descArr += `
-    <div class="media p-1 flex-grow-1">
-    <img src="${movieArr[i].image}" alt="" class="border">
-    <div class="media-body p-3 d-flex flex-column justify-content-between">
-      <div class="text-left">
-          <h4>${movieArr[i].movieName}</h4>
-          <p>${movieArr[i].description}</p>
-      </div>  
-      <div class="text-right"><span id="like-btn" class="like-link">Like <i class="fas fa-thumbs-up"></i></span><span class="like-number rounded-circle">${movieArr[i].likes}</span></div>
-    </div>
-    </div>`
-  };
-  document.getElementById("movie-container").innerHTML = descArr;
+  movieArr = movieArr.sort((a, b) => b.likes - a.likes);
+  showMovies(movieArr);
+  addLikes();
 }
 
-
-
 // CREATE LIKE BUTTON - not workin after sporting
-let likeLink = document.getElementsByClassName("like-link");
+function addLikes(){
+  let likeLink = document.getElementsByClassName("like-link");
 
-for (let i = 0; i < likeLink.length; i++) {
-  likeLink[i].addEventListener("click", function () {
-    likeIncrement(i)
-  })
-};
+  for (let i = 0; i < likeLink.length; i++) {
+    likeLink[i].addEventListener("click", function () {
+      likeIncrement(i)
+    })
+  };
+}
 
 function likeIncrement(i) {
   movieArr[i].likes++;
