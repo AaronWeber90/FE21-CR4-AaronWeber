@@ -69,6 +69,8 @@ p {
   margin: 0 0 2em 0;
   border-radius: 5px;
   margin: 1em;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
 }
 
 .media img {
