@@ -85,6 +85,10 @@ p {
   height: 100%;
 }
 
+.media p {
+  opacity: 0.6;
+}
+
 .like-link {
   color: #7c3559;
   font-weight: bold;

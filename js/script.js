@@ -42,7 +42,6 @@ function movieSort() {
   movieArr = movieArr.sort((a, b) => b.likes - a.likes);
   showMovies();
   addLikes();
-
 }
 
 // LOOP THROUGH LIKE BTN AND ADD EVENTLISTENER
